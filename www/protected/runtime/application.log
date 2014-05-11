@@ -1,0 +1,64 @@
+2014/05/11 22:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
+2014/05/11 22:05:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "index".' in /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/hiwork.dev/www/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/
+---
