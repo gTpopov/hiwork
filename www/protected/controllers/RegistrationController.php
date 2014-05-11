@@ -4,6 +4,10 @@
 
         public function actionIndex(){
 
-            $this->render('index');
+            $model = new Users();
+
+            $this->render('index',array(
+                'model' => $model
+            ));
         }
     }

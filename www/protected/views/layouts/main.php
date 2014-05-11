@@ -3,7 +3,8 @@
 <html>
     <head>
         <?php
-            Yii::app()->clientScript->registerPackage('bootstrap')->registerCssFile('/css/application/default.css');
+            Yii::app()->clientScript->registerPackage('bootstrap')->registerCssFile('/css/application/default.css')
+                ->registerCssFile('/css/application/default.forms.css');
             Yii::app()->clientScript->registerCssFile(CHtml::normalizeUrl('http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic&subset=latin-ext,cyrillic-ext'));
         ?>
         <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/app.design/logo.png" type="image/x-icon" />
@@ -11,7 +12,8 @@
     </head>
 
     <body>
-        <div id="wrapper">
+
+    <div id="wrapper">
             <header class="navbar navbar-default" role="navigation">
                 <div class="container-pass">
                     <div class="container-fluid pull-left" id="keeper">
@@ -59,8 +61,10 @@
                 <?php print (string) $content; ?>
             </div>
         </div>
-        <footer class="">
 
+        <footer class="col-sm-12">
+            <div class="ripts pull-left"> &copy; <?php print Yii::app()->name.' &centerdot; '.date('Y'); ?></div>
         </footer>
+
     </body>
 </html>
