@@ -35,8 +35,8 @@
                             <?php
                             $this->widget('zii.widgets.CMenu', array(
                                 'items'=>array(
-                                    array('label'=>'Вход', 'url'=>array('/index/index')),
-                                    array('label'=>'Регистрация', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),
+                                    array('label'=>'Вход', 'url'=>array('/enter/index'), 'visible' => Yii::app()->user->isGuest),
+                                    array('label'=>'Регистрация', 'url'=>array('/registration/index'), 'visible' => Yii::app()->user->isGuest),
                                 ),
                                 'htmlOptions' => array(
                                     'class' => 'nav navbar-nav pull-right'
