@@ -9,6 +9,7 @@ html, body {
     position: relative;
     font-size: 12px;
     cursor: default;
+    min-width: 860px;
     color: #444b53;
     height: 100%;
 }
@@ -121,14 +122,15 @@ header{
 
 /* footer */
 footer{
-    color: #999;
-    font-weight: 400;
-    font-size: 12px;
+    color: #444;
+    font-weight: 600;
+    font-size: 14px;
     direction: ltr;
     border-top: 1px solid #ccc;
     padding: 15px 10px 10px;
     position: absolute !important;
     bottom: 0;
+    text-shadow: 0 -1px rgba(0, 0, 0, .12);
     right: 0;
     left: 0;
 }
