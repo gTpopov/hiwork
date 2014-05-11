@@ -46,6 +46,7 @@ header{
 #bs-example-navbar-collapse-1 form{
     padding-left: 0;
     margin-top: 6px;
+    position: relative;
 }
 .form-group-keeper{
     width: 300px;
@@ -63,17 +64,37 @@ header{
     padding-left: 7px;
     outline: none !important;
     box-shadow: none !important;
-    margin-top: 0;
-    padding-top: 6px;
+    margin-top: 1px;
+    padding-top: 5px;
     font-size: 14px;
     display: block;
-    height: 28px;
+    height: 27px;
     width: 100%;
 }
+.search-button-top{
+    background-color: transparent;
+    border: 0;
+    border-left: 1px solid #DDD;
+    cursor: pointer;
+    outline: none !important;
+    position: absolute;
+    top: 5px;
+    font-size: 14px;
+    color: #999;
+    vertical-align: -2px;
+    right: 18px;
+}
 
+/* navigation */
 .nav-container .nav{
     margin-top: 6px;
     padding-top: 0;
+}
+.navbar-default .navbar-nav>li{
+    margin-right: 5px;
+}
+.navbar-default .navbar-nav>li:last-child{
+    margin-right: 0;
 }
 .navbar-default .navbar-nav>li>a{
     font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
