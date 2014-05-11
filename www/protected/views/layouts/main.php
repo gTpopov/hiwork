@@ -31,6 +31,19 @@
                                 <input type="text" class="form-control" id="top-search" placeholder="Найти заказ...">
                             </div>
                         </form>
+                        <div class="nav-container pull-right">
+                            <?php
+                            $this->widget('zii.widgets.CMenu', array(
+                                'items'=>array(
+                                    array('label'=>'Вход', 'url'=>array('/index/index')),
+                                    array('label'=>'Регистрация', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),
+                                ),
+                                'htmlOptions' => array(
+                                    'class' => 'nav navbar-nav pull-right'
+                                )
+                            ));
+                            ?>
+                        </div>
                     </div>
                 </div>
             </header>
