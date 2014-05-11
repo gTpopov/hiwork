@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </header>
-            <div class="col-sm-12 content-in">
+            <div class="container">
                 <?php print (string) $content; ?>
             </div>
         </div>
