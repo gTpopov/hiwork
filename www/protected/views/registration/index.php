@@ -64,5 +64,3 @@
     <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-
-<h3>Test Hello</h3>
