@@ -98,7 +98,7 @@ header{
     background-image: url("/images/app.icons/search.png");
     background-repeat: no-repeat;
     background-position: center center;
-    height: 22px;
+    height: 23px;
     width: 22px;
     border: 0;
     border-left: 1px solid #DDD;
@@ -106,7 +106,7 @@ header{
     outline: none !important;
     position: absolute;
     top: 3px;
-    bottom: 2px;
+    bottom: 1px;
     font-size: 14px;
     color: #999;
     padding-left: 20px;
