@@ -66,9 +66,9 @@ class Users extends CActiveRecord
             ),
             array(
                 'user_main_email', 'match',
-                'pattern' => '^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$',
+                'pattern' => '/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/',
                 'on'      => self::SCENARIO_REGISTRATION,
-                'message' => 'Этот {attribute} содержит ошибку'
+                'message' => '{attribute} содержит ошибку'
             ),
             array(
                 'user_password', 'length',
@@ -186,8 +186,17 @@ class Users extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Users the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
+
+
+    protected function beforeSave(){
+
+        $this->user_password = md5('HiWork.greg.2014'.$this->user_password);
+        return parent::beforeSave();
+
+    }
+
 }

@@ -30,10 +30,14 @@ h2{
     text-decoration: underline;
 }
 .row-in{
-    margin: 10px 0;
+    margin: 5px 0;
 }
 .row-in a{
     text-decoration: underline;
+}
+.row-in .alert{
+    padding: 8px 10px;
+    margin: 4px 0;
 }
 #email-alert-in-label,#password-alert-in-label{
     font-weight: 400;

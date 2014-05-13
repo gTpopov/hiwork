@@ -4,6 +4,7 @@ $(function(){
         reg_objects.button_unlock()
     });
 
+
     var reg_objects = {
         password : 'nil',
         email    : 'nil'
@@ -48,7 +49,7 @@ $(function(){
 
     $('#Users_user_nick_name').keyup(function(){
         reg_objects.button_unlock();
-    });
+    }).focus();
 
     $('#Users_user_main_email').keyup(function(){
 

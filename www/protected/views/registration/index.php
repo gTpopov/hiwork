@@ -10,17 +10,25 @@
 ?>
 
 <div class="form">
+    <?php
 
-    <div class="alert text-center alert-danger">
-        <p class="alert-message">Lorem ipsum dolor sit amet</p>
-        <span class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</span>
-    </div>
+        if(Yii::app()->user->hasFlash('success-registration')){
 
-    <div class="alert text-center alert-success">
-        <p class="alert-message">Lorem ipsum dolor sit amet</p>
-        <span class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</span>
-    </div>
+            print
+                '<div class="alert text-center alert-success">
+                    <p class="alert-message">'.Yii::app()->user->getFlash('success-registration').'</p>
+                    <span class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</span>
+                </div>';
 
+        }else if(Yii::app()->user->hasFlash('failed-registration')){
+            print
+                '<div class="alert text-center alert-danger">
+                    <p class="alert-message">'.Yii::app()->user->getFlash('failed-registration').'</p>
+                    <span class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</span>
+                </div>';
+        }
+
+    ?>
     <div class="form-control-container">
         <h2 class="text-center">Присоединяйся</h2>
         <?php
@@ -35,35 +43,41 @@
         ?>
 
         <div class="col-sm-12 row-in">
-            <?php echo $form->labelEx($model,'user_nick_name',array(
+            <?php echo $form->labelEx($model,'user_nick_name', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->textField($model,'user_nick_name',array(
+            <?php echo $form->textField($model,'user_nick_name', array(
                 'placeholder' => 'Ваш никнейм'
             )); ?>
-            <?php echo $form->error($model,'user_nick_name'); ?>
+            <?php echo $form->error($model,'user_nick_name', array(
+                'class' => 'alert alert-danger'
+            )); ?>
         </div>
 
         <div class="col-sm-12 row-in">
-            <?php echo $form->labelEx($model,'user_main_email',array(
+            <?php echo $form->labelEx($model,'user_main_email', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->textField($model,'user_main_email',array(
+            <?php echo $form->textField($model,'user_main_email', array(
                 'placeholder' => 'name-email@example.com'
             )); ?>
-            <?php echo $form->error($model,'user_main_email'); ?>
+            <?php echo $form->error($model,'user_main_email', array(
+                'class' => 'alert alert-danger'
+            )); ?>
         </div>
 
         <div class="col-sm-12 row-in">
-            <?php echo $form->labelEx($model,'user_password',array(
+            <?php echo $form->labelEx($model,'user_password', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->passwordField($model,'user_password',array(
+            <?php echo $form->passwordField($model,'user_password', array(
                 'placeholder' => 'Придумайте пароль',
                 'minlength'   => 8,
                 'maxlength'   => 32
             )); ?>
-            <?php echo $form->error($model,'user_password'); ?>
+            <?php echo $form->error($model,'user_password', array(
+                'class' => 'alert alert-danger'
+            )); ?>
         </div>
 
         <div class="col-sm-12 text-center user-accept row-in">
