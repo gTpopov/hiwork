@@ -48,9 +48,13 @@
                 }
             }
 
-            $this->render('index',array(
-                'model' => $model
-            ));
+            if(Yii::app()->user->isGuest){
+                $this->render('index',array(
+                    'model' => $model
+                ));
+            }else{
+                $this->redirect(Yii::app()->user->returnUrl);
+            }
         }
 
         protected function actionAddUser(){
