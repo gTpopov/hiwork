@@ -5,7 +5,7 @@
         public function init(){
 
             if($this->authFile === null){
-                $this->authFile = Yii::getPathOfAlias('application.config.auth').'.php';
+                $this->authFile = Yii::getPathOfAlias('application.config.roles').'.php';
             }
 
             parent::init();
