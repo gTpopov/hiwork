@@ -28,6 +28,16 @@
                         $model->user_password = $_POST['Users']['user_password'];
                         Yii::app()->user->setFlash('success-registration',"На вашу почту отправлено письмо с дальнейшими инструкциями.");
 
+                        // Send message on mail
+                        Yii::app()->mailer->From = "test@mail.com";
+                        Yii::app()->mailer->FromName = "Delphis - servise.";
+                        Yii::app()->mailer->AddAddress("mih_76@mail.ru", 'Имя');
+                        Yii::app()->mailer->IsHTML(true);
+                        Yii::app()->mailer->Subject = "Поступил новый заказ Delphis";
+                        Yii::app()->mailer->Body = "Text";
+
+                        if(!Yii::app()->mailer->Send()) die ('Mailer Error: '.Yii::app()->mailer->ErrorInfo);
+
                     }else
                     {
 
