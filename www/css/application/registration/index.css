@@ -8,7 +8,7 @@
     border-radius: 2px;
     box-shadow: 0 0 4px #DDD;
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 10px 15px;
     background-color: #f9f9f9;
 }
 h2{
@@ -17,14 +17,23 @@ h2{
     border-bottom: 1px solid #DDD;
     padding-bottom: 8px;
 }
+.formLabel{
+    margin-left: 2px;
+}
+.formLabel:after{
+    content: ' *';
+}
 .user-accept{
     margin: 0 0 10px;
     padding: 9px 0;
     border-bottom: 1px dotted #DDD;
     border-top: 1px dotted #DDD;
 }
+.buttons{
+    margin-top: 5px;
+}
 #reparePass{
-    margin-top: 7px;
+    margin-top: 6px;
     margin-left: 5px;
     font-size: 14px;
     text-decoration: underline;

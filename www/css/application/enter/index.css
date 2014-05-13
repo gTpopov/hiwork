@@ -1,0 +1,19 @@
+.form{
+    position: relative;
+    width: 392px;
+    margin: auto;
+}
+.row-in{
+    margin: 5px 0;
+}
+.rem-me-box{
+    margin-top: 6px;
+}
+.rem-me-box label{
+    float: left;
+    margin-right: 4px;
+    margin-top: -1px;
+}
+.rem-me-box label:first-letter{
+    text-transform: uppercase;
+}

@@ -1,8 +1,10 @@
 .formLabel{
     display: block;
     clear: both;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    float: left;
+    font-weight: 400;
 }
 .formLabel:first-letter{
     text-transform: uppercase;
@@ -60,7 +62,7 @@ input[type=text],input[type=email],input[type=password]{
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.75);
     display: block;
-    padding: 8px 4px;
+    padding: 6px 4px;
     vertical-align: 0;
     line-height: normal;
     width: 100%;

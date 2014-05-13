@@ -3,7 +3,11 @@
 
         public function actionIndex(){
 
-            $this->render('index');
+            $model = new LoginForm();
+
+            $this->render('index',array(
+                'model' => $model
+            ));
         }
 
     }

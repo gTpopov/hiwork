@@ -32,7 +32,11 @@ class LoginForm extends CFormModel
 	 */
 	public function attributeLabels()
 	{
-		return array( 'remember_me'=>'запомнить меня', );
+		return array(
+            'user_main_email' => 'email',
+            'user_password'   => 'пароль',
+            'remember_me'     => 'запомнить меня',
+        );
 	}
 
 	/**

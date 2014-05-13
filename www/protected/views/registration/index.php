@@ -1,11 +1,11 @@
 <?php
 
-    /* @var $this RegistrationController */
+    /* @var $this  RegistrationController */
     /* @var $model Users */
-    /* @var $form CActiveForm */
+    /* @var $form  CActiveForm */
 
-    Yii::app()->clientScript->registerCssFile('/css/application/registration/index.css');
-    Yii::app()->clientScript->registerScriptFile('/js/application/registration/index.js');
+    Yii::app()->clientScript->registerCssFile('/css/application/registration/index.css')
+        ->registerScriptFile('/js/application/registration/index.js');
 
 ?>
 
