@@ -1,18 +1,21 @@
 <?php
 
     class WebUser extends CWebUser {
+
         private $_model = null;
+
 
         function getRole() {
             if($user = $this->getModel()){
-                // в таблице User есть поле role
-                return $user->role;
+                return $user->user_role_access;
+            }else{
+                return false;
             }
         }
 
         private function getModel(){
             if (!$this->isGuest && $this->_model === null){
-                $this->_model = User::model()->findByPk($this->id, array('select' => 'role'));
+                $this->_model = Users::model()->findByPk($this->user_id,array('select'=>'user_role_access'));
             }
             return $this->_model;
         }

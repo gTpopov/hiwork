@@ -26,7 +26,9 @@
                 'class'       => 'alert alert-danger',
                 'placeholder' => 'name-email@example.com'
             )); ?>
-            <?php echo $form->error($model,'user_main_email'); ?>
+            <?php echo $form->error($model,'user_main_email', array(
+                'class' => 'alert alert-danger'
+            )); ?>
         </div>
 
         <div class="row-in col-sm-12">
@@ -37,7 +39,9 @@
                 'class' => 'alert alert-danger',
                 'placeholder' => 'Ваш пароль'
             )); ?>
-            <?php echo $form->error($model,'user_password'); ?>
+            <?php echo $form->error($model,'user_password', array(
+                'class' => 'alert alert-danger'
+            )); ?>
         </div>
 
         <div class="row-in col-sm-12 buttons">

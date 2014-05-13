@@ -11,9 +11,10 @@
             {
 
                 $model->setScenario('registration');
-                $model->user_main_email = mb_strtolower(str_replace(" ","",$_POST['Users']['user_main_email']));
-                $model->user_password   = $_POST['Users']['user_password'];
-                $model->user_nick_name  = str_replace(" ","",$_POST['Users']['user_nick_name']);
+                $model->user_main_email  = (string) mb_strtolower(str_replace(" ","",$_POST['Users']['user_main_email']));
+                $model->user_password    = (string) $_POST['Users']['user_password'];
+                $model->user_nick_name   = (string) str_replace(" ","",$_POST['Users']['user_nick_name']);
+                $model->user_role_access = (int) 0;
 
                 if($model->validate())
                 {
