@@ -4,19 +4,30 @@
     /* @var $model Users */
     /* @var $form CActiveForm */
 
-    Yii::app()->clientScript->registerScriptFile('/js/library/password-browse.js');
     Yii::app()->clientScript->registerCssFile('/css/application/registration/index.css');
     Yii::app()->clientScript->registerScriptFile('/js/application/registration/index.js');
 
 ?>
 
 <div class="form">
+
+    <div class="alert text-center alert-danger">
+        <p class="alert-message">Lorem ipsum dolor sit amet</p>
+        <button type="button" class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+
     <div class="form-control-container">
         <h2 class="text-center">Присоединяйся</h2>
-        <?php $form = $this->beginWidget('CActiveForm', array(
-            'id'                    => 'users-index-form',
-            'enableAjaxValidation'  => false,
-        )); ?>
+        <?php
+
+            $form = $this->beginWidget('CActiveForm', array(
+                'enableClientValidation' => true,
+                'enableAjaxValidation'   => false,
+                'clientOptions'          => array(
+                    'validateOnSubmit' => true
+                ),
+            ));
+        ?>
 
         <div class="col-sm-12 row-in">
             <?php echo $form->labelEx($model,'user_nick_name',array(
@@ -43,7 +54,9 @@
                 'class' => 'formLabel'
             )); ?>
             <?php echo $form->passwordField($model,'user_password',array(
-                'placeholder' => 'Придумайте пароль'
+                'placeholder' => 'Придумайте пароль',
+                'minlength'   => 8,
+                'maxlength'   => 32
             )); ?>
             <?php echo $form->error($model,'user_password'); ?>
         </div>

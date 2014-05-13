@@ -55,20 +55,25 @@ class Users extends CActiveRecord
 		return array(
 
             array(
-                'user_nick_name, user_main_email, user_password',
-                'required', 'on' =>  self::SCENARIO_REGISTRATION,
-                'message'        => '{attribute} не заполнен'
+                'user_nick_name, user_main_email, user_password','required',
+                'on'      =>  self::SCENARIO_REGISTRATION,
+                'message' => '{attribute} не заполнен'
             ),
             array(
-                'user_nick_name, user_main_email',
-                'unique', 'on'  => self::SCENARIO_REGISTRATION,
-                'message'       => 'Этот {attribute} уже занят'
+                'user_nick_name, user_main_email','unique',
+                'on'      => self::SCENARIO_REGISTRATION,
+                'message' => 'Этот {attribute} уже занят'
             ),
             array(
                 'user_main_email', 'match',
-                'pattern'=>'^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$',
-                'on'  => self::SCENARIO_REGISTRATION,
-                'message'       => 'Этот {attribute} содержит ошибку'
+                'pattern' => '^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$',
+                'on'      => self::SCENARIO_REGISTRATION,
+                'message' => 'Этот {attribute} содержит ошибку'
+            ),
+            array(
+                'user_password', 'length',
+                'on'    => self::SCENARIO_REGISTRATION,
+                'min'   => 8, 'max' => 32
             ),
 
 		);

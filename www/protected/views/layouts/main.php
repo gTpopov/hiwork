@@ -4,6 +4,7 @@
     <head>
         <?php
             Yii::app()->clientScript->registerPackage('bootstrap')->registerCssFile('/css/application/default.css')
+                ->registerCssFile('/css/application/default.UI.css')
                 ->registerCssFile('/css/application/default.forms.css');
             Yii::app()->clientScript->registerCssFile(CHtml::normalizeUrl('http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic&subset=latin-ext,cyrillic-ext'));
         ?>
@@ -24,7 +25,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">HW</a>
+                            <a class="navbar-brand" href="/">HW</a>
                         </div>
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
