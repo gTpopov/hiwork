@@ -46,8 +46,8 @@
                         }
                         //Yii::app()->mailer->ClearAddresses();
 
-                    } else
-                    {
+                    }
+                    else {
 
                         $model->user_password = $_POST['Users']['user_password'];
                         Yii::app()->user->setFlash('failed-registration',"Что-то пошло не так, попробуйте позже.");
