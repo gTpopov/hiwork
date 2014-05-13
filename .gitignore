@@ -1,6 +1,6 @@
-.DS_Store
 .idea
 www/logs/
 framework/
 www/assets/
 www/protected/config/
+www/protected/runtime/
