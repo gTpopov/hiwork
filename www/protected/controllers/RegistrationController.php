@@ -26,7 +26,6 @@
                     {
 
                         $model->user_password = $_POST['Users']['user_password'];
-
                         $user_id = Yii::app()->db->lastInsertID;
 
                         // Send message on mail
@@ -44,7 +43,6 @@
                             Yii::app()->user->setFlash('success-registration',"На вашу почту отправлено письмо с дальнейшими инструкциями.");
 
                         }
-                        //Yii::app()->mailer->ClearAddresses();
                     }
                     else {
 
