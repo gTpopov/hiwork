@@ -35,6 +35,11 @@ h2{
 .row-in a{
     text-decoration: underline;
 }
+#email-alert-in-label,#password-alert-in-label{
+    font-weight: 400;
+    display: block;
+    padding-top: 3px;
+}
 small{
     font-size: 12px;
 }

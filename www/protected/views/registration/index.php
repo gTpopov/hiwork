@@ -4,20 +4,18 @@
     /* @var $model Users */
     /* @var $form CActiveForm */
 
+    Yii::app()->clientScript->registerScriptFile('/js/library/password-browse.js');
     Yii::app()->clientScript->registerCssFile('/css/application/registration/index.css');
+    Yii::app()->clientScript->registerScriptFile('/js/application/registration/index.js');
 
 ?>
 
 <div class="form">
     <div class="form-control-container">
         <h2 class="text-center">Присоединяйся</h2>
-        <?php $form=$this->beginWidget('CActiveForm', array(
-            'id'=>'users-index-form',
-            // Please note: When you enable ajax validation, make sure the corresponding
-            // controller action is handling ajax validation correctly.
-            // See class documentation of CActiveForm for details on this,
-            // you need to use the performAjaxValidation()-method described there.
-            'enableAjaxValidation'=>false,
+        <?php $form = $this->beginWidget('CActiveForm', array(
+            'id'                    => 'users-index-form',
+            'enableAjaxValidation'  => false,
         )); ?>
 
         <div class="col-sm-12 row-in">
@@ -25,7 +23,7 @@
                 'class' => 'formLabel'
             )); ?>
             <?php echo $form->textField($model,'user_nick_name',array(
-                'placeholder' => 'name-email@example.com'
+                'placeholder' => 'Ваш никнейм'
             )); ?>
             <?php echo $form->error($model,'user_nick_name'); ?>
         </div>
@@ -35,7 +33,7 @@
                 'class' => 'formLabel'
             )); ?>
             <?php echo $form->textField($model,'user_main_email',array(
-                'placeholder' => 'Ваш никнейм'
+                'placeholder' => 'name-email@example.com'
             )); ?>
             <?php echo $form->error($model,'user_main_email'); ?>
         </div>
@@ -51,7 +49,7 @@
         </div>
 
         <div class="col-sm-12 text-center user-accept row-in">
-            <small>Регистрируясь вы автоматически соглашаетесь с <a href="#">условиями использования</a> и <a href="#">пользовательским соглашением</a></small>
+            <small>Регистрируясь вы автоматически соглашаетесь с нашими <a href="#">Условиями использования</a> и <a href="#">Пользовательским соглашением</a></small>
         </div>
 
 

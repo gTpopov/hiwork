@@ -14,6 +14,10 @@
     padding: 6px 15px;
 }
 
+.btn[disabled=disabled]{
+    cursor: not-allowed;
+    pointer-events: auto;
+}
 .btn-info{
     background-color: #0066cc;
     border: 0;
@@ -30,7 +34,9 @@
 .btn-info:hover, .btn-info:active, .btn-info:focus{
     background-color: rgba(0, 102, 204, 0.73);
 }
-
+.btn-info[disabled=disabled],.btn-info[disabled=disabled]:hover{
+    background-color: #90b0e0;
+}
 
 /* input writtable fields */
 input[type=text],input[type=email],input[type=password]{
