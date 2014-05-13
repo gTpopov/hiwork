@@ -35,41 +35,68 @@
                             </div>
                             <button class="search-button-top"></button>
                         </form>
+                        <div class="nav-container nav-user pull-left">
+                            <?php
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'encodeLabel' => false,
+                                    'items'       => array(
+                                        array(
+                                            'label'=> Yii::app()->user->nick.' <b class="caret"></b>', 'url'=>array(''),
+                                            'items'=>array(
+                                                array(
+                                                    'label'=>'Журнал действий',
+                                                    'url'=>array('product/new','tag'=>'new')
+                                                ),
+                                                array(
+                                                    'label'=>'Создать страницу компании',
+                                                    'url'=>array('product/new','tag'=>'new')
+                                                ),
+                                                array(
+                                                    'label'=>'Настройки',
+                                                    'url'=>array('product/index'),
+                                                ),
+                                                array(
+                                                    'label'       => '',
+                                                    'url'         => array('#'),
+                                                    'itemOptions' => array('class' => 'divider')
+                                                ),
+                                                array(
+                                                    'label'=>'Выход',
+                                                    'url'=>array('/enter/exit', 'tag'=>'exit'),
+                                                ),
+                                            ),
+                                            'linkOptions' => array('class'=>'dropdown-toggle','data-toggle'=>'dropdown'),
+                                            'visible' => Yii::app()->user->checkAccess(1)
+                                        ),
+                                    ),
+                                    'htmlOptions' => array(
+                                        'class' => 'nav navbar-nav pull-left'
+                                    ),
+                                    'submenuHtmlOptions' => array('class'=>'dropdown-menu')
+                                ));
+                            ?>
+                        </div>
                         <div class="nav-container pull-right">
                             <?php
-                            $this->widget('zii.widgets.CMenu', array(
-                                'encodeLabel' => false,
-                                'items'       => array(
-                                    array(
-                                        'label'   => 'Вход',
-                                        'url'     => array('/enter'),
-                                        'visible' => Yii::app()->user->isGuest
-                                    ),
-                                    array(
-                                        'label'   => 'Регистрация',
-                                        'url'     => array('/registration/index'),
-                                        'visible' => Yii::app()->user->isGuest
-                                    ),
-                                    array(
-                                        'label'=>'Products', 'url'=>array('product/index'),
-                                        'items'=>array(
-                                            array(
-                                                'label'=>'New Arrivals',
-                                                'url'=>array('product/new','tag'=>'new')
-                                            ),
-                                            array(
-                                                'label'=>'Most Popular',
-                                                'url'=>array('product/index', 'tag'=>'popular'),
-                                                'itemOptions' => array('class'=>'dropdown-menu')
-                                            ),
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'encodeLabel' => false,
+                                    'items'       => array(
+                                        array(
+                                            'label'   => 'Вход',
+                                            'url'     => array('/enter'),
+                                            'visible' => Yii::app()->user->isGuest
                                         ),
-                                        'visible' => Yii::app()->user->checkAccess(1)
+                                        array(
+                                            'label'   => 'Регистрация',
+                                            'url'     => array('/registration/index'),
+                                            'visible' => Yii::app()->user->isGuest
+                                        ),
                                     ),
-                                ),
-                                'htmlOptions' => array(
-                                    'class' => 'nav navbar-nav pull-right'
-                                )
-                            ));
+                                    'htmlOptions' => array(
+                                        'class' => 'nav navbar-nav pull-right'
+                                    ),
+                                    'submenuHtmlOptions' => array('class'=>'dropdown-menu')
+                                ));
                             ?>
                         </div>
                     </div>
