@@ -73,6 +73,7 @@ header{
     padding-top: 6px;
     font-size: 14px;
     display: block;
+    color: #444;
     height: 27px;
     width: 100%;
 }
@@ -84,6 +85,7 @@ header{
     outline: none !important;
     position: absolute;
     top: 5px;
+    bottom: 3px;
     font-size: 14px;
     color: #999;
     vertical-align: -2px;
@@ -108,7 +110,7 @@ header{
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px;
-    font-weight: 800;
+    font-weight: 500;
     color: #fff;
     padding: 4px 12px;
 }

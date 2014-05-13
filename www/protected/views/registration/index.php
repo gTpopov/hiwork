@@ -13,7 +13,7 @@
 </div>
 
 <div class="form col-sm-5">
-    <h2 class="text-center">Присоединяйся!</h2>
+    <h2 class="text-center">Присоединяйся</h2>
     <?php $form=$this->beginWidget('CActiveForm', array(
         'id'=>'users-index-form',
         // Please note: When you enable ajax validation, make sure the corresponding
