@@ -162,6 +162,9 @@ header{
     background: rgba(0, 0, 0, .1);
     color: #FFF;
 }
+.open > ul > li.active a{
+    color: #222 !important;
+}
 .dropdown-menu{
     margin-top: 0 !important;
     border-top: 0 !important;
@@ -185,7 +188,6 @@ header{
     color: #08c;
     margin-right: 6px;
     margin-left: -8px;
-    font-size: 14px;
     float: left;
 }
 .dropdown-menu>li>a .glyphicon-tower,
@@ -196,7 +198,8 @@ header{
 .dropdown-menu>li>a .glyphicon-upload,
 .dropdown-menu>li>a .glyphicon-download,
 .dropdown-menu>li>a .glyphicon-dashboard {
-    vertical-align: -1px;
+    vertical-align: -2px;
+    font-size: 15px;
 }
 .dropdown-menu>li>a .glyphicon-leaf{
     vertical-align: -2px;
@@ -205,6 +208,11 @@ header{
     vertical-align: -1px;
     margin-right: 2px;
     margin-left: -4px;
+}
+.blocked-menu-item a, .blocked-menu-item span, .blocked-menu-item a:hover{
+    color: #D0D0D0 !important;
+    background-color: transparent !important;
+    cursor: default !important;
 }
 
 /* footer */

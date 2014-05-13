@@ -35,30 +35,7 @@
                             </div>
                             <button class="search-button-top"></button>
                         </form>
-                        <div class="nav-container nav-user pull-left">
-                            <?php
-                                $this->widget('zii.widgets.CMenu', array(
-                                    'encodeLabel' => false,
-                                    'items'       => array(
-                                        array(
-                                            'label'   => '<span class="glyphicon glyphicon-list-alt"> </span> Заказы',
-                                            'url'     => array('/enter'),
-                                        ),
-                                        array(
-                                            'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon glyphicon-briefcase"> </span> Вакансии',
-                                            'url'     => array('/enter'),
-                                        ),
-                                        array(
-                                            'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon-globe"> </span> Люди',
-                                            'url'     => array('/enter'),
-                                        ),
-                                    ),
-                                    'htmlOptions' => array(
-                                        'class' => 'nav navbar-nav pull-left'
-                                    ),
-                                    'submenuHtmlOptions' => array('class'=>'dropdown-menu')
-                                ));
-                            ?>
+                        <div class="nav-container pull-right">
                             <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'encodeLabel' => false,
@@ -89,7 +66,8 @@
                                                 ),
                                                 array(
                                                     'label'=>'<span class="glyphicon glyphicon-tower"> </span> Моя компания',
-                                                    'url'=>array('product/new','tag'=>'new')
+                                                    'url'=>array('product/new'),
+                                                    'itemOptions' => array('class' => 'blocked-menu-item')
                                                 ),
                                                 array(
                                                     'label'       => '',
@@ -106,7 +84,7 @@
                                                 ),
                                                 array(
                                                     'label'=>'<span class="glyphicon glyphicon-cog"> </span> Настройки профиля',
-                                                    'url'=>array('product/index'),
+                                                    'url'=>array('/user/settings/index'),
                                                 ),
                                                 array(
                                                     'label'       => '',
@@ -121,19 +99,18 @@
                                             'linkOptions' => array('class'=>'dropdown-toggle', 'id'=>'act-in', 'data-toggle'=>'dropdown'),
                                             'visible' => Yii::app()->user->checkAccess(1)
                                         ),
-                                    ),
-                                    'htmlOptions' => array(
-                                        'class' => 'nav navbar-nav pull-right'
-                                    ),
-                                    'submenuHtmlOptions' => array('class'=>'dropdown-menu')
-                                ));
-                            ?>
-                        </div>
-                        <div class="nav-container pull-right">
-                            <?php
-                                $this->widget('zii.widgets.CMenu', array(
-                                    'encodeLabel' => false,
-                                    'items'       => array(
+                                        array(
+                                            'label'   => '<span class="glyphicon glyphicon-list-alt"></span> Заказы',
+                                            'url'     => array('/index/index'),
+                                        ),
+                                        array(
+                                            'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon glyphicon-briefcase"></span> Вакансии',
+                                            'url'     => array('/enter'),
+                                        ),
+                                        array(
+                                            'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon-globe"></span> Люди',
+                                            'url'     => array('/enter'),
+                                        ),
                                         array(
                                             'label'   => 'Вход',
                                             'url'     => array('/enter/index'),
