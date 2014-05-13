@@ -35,25 +35,21 @@
                             </div>
                             <button class="search-button-top"></button>
                         </form>
-                        <div class="nav-container nav-user pull-left">
+                        <div class="nav-container pull-right">
                             <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'encodeLabel' => false,
                                     'items'       => array(
                                         array(
-                                            'label'=> Yii::app()->user->nick.' <b class="caret"></b>', 'url'=>array(''),
+                                            'label'=> '<span id="user-menu-pic" class="glyphicon glyphicon-user"> </span> '.Yii::app()->user->nick.' <b class="caret"></b>', 'url'=>array(''),
                                             'items'=>array(
                                                 array(
-                                                    'label'=>'Журнал действий',
+                                                    'label'=>'<span class="glyphicon glyphicon-download"> </span> Мои заказы <span class="label label-message pull-right">24</span>',
                                                     'url'=>array('product/new','tag'=>'new')
                                                 ),
                                                 array(
-                                                    'label'=>'Создать страницу компании',
+                                                    'label'=>'<span class="glyphicon glyphicon-upload"> </span> Мои заявки <span class="label label-message pull-right">4</span>',
                                                     'url'=>array('product/new','tag'=>'new')
-                                                ),
-                                                array(
-                                                    'label'=>'Настройки',
-                                                    'url'=>array('product/index'),
                                                 ),
                                                 array(
                                                     'label'       => '',
@@ -61,29 +57,63 @@
                                                     'itemOptions' => array('class' => 'divider')
                                                 ),
                                                 array(
-                                                    'label'=>'Выход',
+                                                    'label'=>'<span class="glyphicon glyphicon-leaf"> </span> Коллеги <span class="label label-message pull-right">2</span>',
+                                                    'url'=>array('product/new','tag'=>'new')
+                                                ),
+                                                array(
+                                                    'label'=>'<span class="glyphicon glyphicon-inbox"> </span> Сообщения <span class="label label-message pull-right">130</span>',
+                                                    'url'=>array('product/new','tag'=>'new')
+                                                ),
+                                                array(
+                                                    'label'=>'<span class="glyphicon glyphicon-tower"> </span> Моя компания',
+                                                    'url'=>array('product/new'),
+                                                    'itemOptions' => array('class' => 'blocked-menu-item')
+                                                ),
+                                                array(
+                                                    'label'       => '',
+                                                    'url'         => array('#'),
+                                                    'itemOptions' => array('class' => 'divider')
+                                                ),
+                                                array(
+                                                    'label'=>'<span class="glyphicon glyphicon-dashboard"> </span> Журнал действий',
+                                                    'url'=>array('product/new','tag'=>'new')
+                                                ),
+                                                array(
+                                                    'label'=>'<span class="glyphicon glyphicon-plus-sign"> </span> Создать страницу компании',
+                                                    'url'=>array('product/new','tag'=>'new')
+                                                ),
+                                                array(
+                                                    'label'=>'<span class="glyphicon glyphicon-cog"> </span> Настройки профиля',
+                                                    'url'=>array('/user/settings/index'),
+                                                ),
+                                                array(
+                                                    'label'       => '',
+                                                    'url'         => array('#'),
+                                                    'itemOptions' => array('class' => 'divider')
+                                                ),
+                                                array(
+                                                    'label'=>'<span class="glyphicon glyphicon-off"> </span> Выход',
                                                     'url'=>array('/enter/exit', 'tag'=>'exit'),
                                                 ),
                                             ),
-                                            'linkOptions' => array('class'=>'dropdown-toggle','data-toggle'=>'dropdown'),
+                                            'linkOptions' => array('class'=>'dropdown-toggle', 'id'=>'act-in', 'data-toggle'=>'dropdown'),
                                             'visible' => Yii::app()->user->checkAccess(1)
                                         ),
-                                    ),
-                                    'htmlOptions' => array(
-                                        'class' => 'nav navbar-nav pull-left'
-                                    ),
-                                    'submenuHtmlOptions' => array('class'=>'dropdown-menu')
-                                ));
-                            ?>
-                        </div>
-                        <div class="nav-container pull-right">
-                            <?php
-                                $this->widget('zii.widgets.CMenu', array(
-                                    'encodeLabel' => false,
-                                    'items'       => array(
+                                        array(
+                                            'label'   => '<span class="glyphicon glyphicon-list-alt"></span> Заказы',
+                                            'url'     => array('/index/index'),
+                                        ),
+                                        array(
+                                            'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon glyphicon-briefcase"></span> Вакансии',
+                                            'url'     => array('/enter'),
+                                        ),
+                                        array(
+                                            'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon-globe"></span> Люди',
+                                            'url'     => array('/enter'),
+                                        ),
                                         array(
                                             'label'   => 'Вход',
-                                            'url'     => array('/enter'),
+                                            'url'     => array('/enter/index'),
                                             'visible' => Yii::app()->user->isGuest
                                         ),
                                         array(

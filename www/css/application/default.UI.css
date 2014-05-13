@@ -35,3 +35,14 @@
     background-color: #3fc59d;
     color: #FFF;
 }
+
+
+.label-message{
+    background-color: #e2747e;
+    text-align: center;
+    position: absolute;
+    font-size: 12px;
+    border-radius: 50px !important;
+    right: 6px;
+    top: 2px;
+}
