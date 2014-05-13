@@ -13,7 +13,12 @@
 
     <div class="alert text-center alert-danger">
         <p class="alert-message">Lorem ipsum dolor sit amet</p>
-        <button type="button" class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <span class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</span>
+    </div>
+
+    <div class="alert text-center alert-success">
+        <p class="alert-message">Lorem ipsum dolor sit amet</p>
+        <span class="close alert-close" data-dismiss="alert" aria-hidden="true">&times;</span>
     </div>
 
     <div class="form-control-container">

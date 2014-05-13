@@ -1,23 +1,37 @@
 .alert{
     border-radius: 2px;
-    border: 0;
+    position: relative;
     font-size: 14px;
     font-weight: 400;
-    position: relative;
+    border: 0;
 }
 .alert-close{
-    opacity: 1;
-    text-shadow: none;
-    color: inherit;
-    font-weight: 100;
-    position: absolute;
-    top: 29%;
-    border: 1px solid !important;
-    right: 10px;
-    width: 30px !importantgit;
+    background-color: #e2747e !important;
+    border: 3px solid !important;
     border-radius: 50px !important;
+    box-shadow: 0 0 2px #999;
+    width: 27px !important;
+    padding-bottom: 10px;
+    position: absolute;
+    text-align: center;
+    text-shadow: none;
+    color: #FFF !important;
+    display: block;
+    height: 27px;
+    right: -10px;
+    opacity: 1;
+    top: -10px;
+}
+.alert-close:hover{
+    opacity: 1;
+    box-shadow: 0 0 2px #999, 0 0 4px #999;
 }
 .alert-danger{
-    color: #FFF;
     background-color: #e2747e;
+    color: #FFF;
+}
+
+.alert-success {
+    background-color: #3fc59d;
+    color: #FFF;
 }
