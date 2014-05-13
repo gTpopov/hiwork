@@ -38,7 +38,8 @@
                         <div class="nav-container pull-right">
                             <?php
                             $this->widget('zii.widgets.CMenu', array(
-                                'items'=>array(
+                                'encodeLabel' => false,
+                                'items'       => array(
                                     array(
                                         'label'   => 'Вход',
                                         'url'     => array('/enter'),
@@ -50,9 +51,19 @@
                                         'visible' => Yii::app()->user->isGuest
                                     ),
                                     array(
-                                        'label'   => 'Выход',
-                                        'url'     => array('/enter/exit'),
-                                        'visible' => !Yii::app()->user->isGuest
+                                        'label'=>'Products', 'url'=>array('product/index'),
+                                        'items'=>array(
+                                            array(
+                                                'label'=>'New Arrivals',
+                                                'url'=>array('product/new','tag'=>'new')
+                                            ),
+                                            array(
+                                                'label'=>'Most Popular',
+                                                'url'=>array('product/index', 'tag'=>'popular'),
+                                                'itemOptions' => array('class'=>'dropdown-menu')
+                                            ),
+                                        ),
+                                        'visible' => Yii::app()->user->checkAccess(1)
                                     ),
                                 ),
                                 'htmlOptions' => array(
