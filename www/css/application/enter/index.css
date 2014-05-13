@@ -31,6 +31,7 @@ h2{
     float: left;
     margin-right: 4px;
     margin-top: -1px;
+    width: auto;
 }
 .rem-me-box label:first-letter{
     text-transform: uppercase;

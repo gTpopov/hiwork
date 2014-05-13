@@ -11,7 +11,9 @@
             {
 
                 $model->setScenario('registration');
-                $model->attributes = $_POST['Users'];
+                $model->user_main_email = mb_strtolower(str_replace(" ","",$_POST['Users']['user_main_email']));
+                $model->user_password   = $_POST['Users']['user_password'];
+                $model->user_nick_name  = str_replace(" ","",$_POST['Users']['user_nick_name']);
 
                 if($model->validate())
                 {

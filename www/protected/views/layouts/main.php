@@ -50,7 +50,7 @@
                                         'visible' => Yii::app()->user->isGuest),
                                     array(
                                         'label'   => 'Выход',
-                                        'url'     => array('/registration/index'),
+                                        'url'     => array('/enter/exit'),
                                         'visible' => !Yii::app()->user->isGuest),
                                 ),
                                 'htmlOptions' => array(

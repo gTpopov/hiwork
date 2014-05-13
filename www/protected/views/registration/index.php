@@ -57,7 +57,7 @@
             <?php echo $form->labelEx($model,'user_main_email', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->passwordField($model,'user_main_email', array(
+            <?php echo $form->emailField($model,'user_main_email', array(
                 'placeholder' => 'name-email@example.com'
             )); ?>
             <?php echo $form->error($model,'user_main_email', array(
