@@ -33,7 +33,7 @@
             <?php echo $form->labelEx($model,'user_password', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->textField($model,'user_password', array(
+            <?php echo $form->passwordField($model,'user_password', array(
                 'class' => 'alert alert-danger',
                 'placeholder' => 'Ваш пароль'
             )); ?>
