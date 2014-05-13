@@ -40,12 +40,12 @@
                                 'items'=>array(
                                     array(
                                         'label'   => 'Вход',
-                                        'url'     => array('/enter/index'),
+                                        'url'     => array('/enter'),
                                         'visible' => Yii::app()->user->isGuest
                                     ),
                                     array(
                                         'label'   => 'Регистрация',
-                                        'url'     => array('/registration/index'),
+                                        'url'     => array('/registration'),
                                         'visible' => Yii::app()->user->isGuest),
                                 ),
                                 'htmlOptions' => array(
