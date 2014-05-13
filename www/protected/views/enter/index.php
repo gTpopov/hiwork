@@ -6,6 +6,9 @@
 
     Yii::app()->clientScript->registerCssFile('/css/application/enter/index.css')
         ->registerScriptFile('/js/application/enter/index.js');
+
+    $this->pageTitle = Yii::app()->name.'| Вход '
+
 ?>
 
 

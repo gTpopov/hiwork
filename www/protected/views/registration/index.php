@@ -7,6 +7,8 @@
     Yii::app()->clientScript->registerCssFile('/css/application/registration/index.css')
         ->registerScriptFile('/js/application/registration/index.js');
 
+    $this->pageTitle = Yii::app()->name.'| Ресгистрация'
+
 ?>
 
 <div class="form">
