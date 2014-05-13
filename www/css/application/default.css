@@ -63,8 +63,8 @@ header{
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
-    padding-right: 25px;
-    padding-left: 7px;
+    padding-right: 30px;
+    padding-left: 19px;
     outline: none !important;
     box-shadow: none !important;
     margin-top: 1px;
@@ -74,8 +74,21 @@ header{
     color: #222;
     height: 27px;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 50px;
+    -webkit-border-top-left-radius:50px;
+    -moz-border-radius-topleft:50px;
+    border-top-left-radius:50px;
+    -webkit-border-top-right-radius:50px;
+    -moz-border-radius-topright:50px;
+    border-top-right-radius:50px;
+    -webkit-border-bottom-right-radius:50px;
+    -moz-border-radius-bottomright:50px;
+    border-bottom-right-radius:50px;
+    -webkit-border-bottom-left-radius:50px;
+    -moz-border-radius-bottomleft:50px;
+    border-bottom-left-radius:50px;
     border: 0;
+    text-indent:0;
 }
 #top-search:focus{
     box-shadow: 0 0 5px #444 !important;
@@ -85,14 +98,14 @@ header{
     background-image: url("/images/app.icons/search.png");
     background-repeat: no-repeat;
     background-position: center center;
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 22px;
     border: 0;
     border-left: 1px solid #DDD;
     cursor: pointer;
     outline: none !important;
     position: absolute;
-    top: 5px;
+    top: 2px;
     bottom: 3px;
     font-size: 14px;
     color: #999;
@@ -123,7 +136,25 @@ header{
     color: #fff;
     padding: 4px 12px;
 }
-.navbar-default .navbar-nav>li:hover>a, .open .dropdown-toggle{
+#act-in:focus,#act-in:active{
+    background: transparent !important;
+    color: #FFF !important;
+}
+#act-in:hover{
+    background: rgba(0, 0, 0, .1) !important;
+    color: #FFF !important;
+}
+.open #act-in{
+    background: #FFF !important;
+    color: #222 !important;
+    border-radius: 2px 2px 0 0;
+    -webkit-box-shadow: 0 -6px 12px rgba(0,0,0,.175);
+    -moz-box-shadow: 0 -6px 12px rgba(0,0,0,.175);
+    -ms-box-shadow: 0 -6px 12px rgba(0,0,0,.175);
+    -o-box-shadow: 0 -6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 -6px 12px rgba(0,0,0,.175);
+}
+.navbar-default .navbar-nav>li:hover>a, .open .dropdown-toggle, .open .dropdown-toggle:focus, .open .dropdown-toggle:active{
     background: rgba(0, 0, 0, .1) !important;
     color: #FFF !important;
 }
@@ -136,12 +167,44 @@ header{
     border-top: 0 !important;
     font-size: 12px !important;
     font-weight: 600;
+    border-radius: 0 4px 4px 4px !important;
+    margin-left: -1px;
 }
-.dropdown-menu li:hover a{
+.dropdown-menu li a{
+    position: relative !important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.dropdown-menu>li:hover>a{
     background: rgba(0, 0, 0, .051);
 }
 .dropdown-menu .divider{
     margin-bottom: 4px;
+}
+.dropdown-menu>li>a .glyphicon {
+    color: #08c;
+    margin-right: 6px;
+    margin-left: -8px;
+    font-size: 14px;
+    float: left;
+}
+.dropdown-menu>li>a .glyphicon-tower,
+.dropdown-menu>li>a .glyphicon-inbox,
+.dropdown-menu>li>a .glyphicon-off,
+.dropdown-menu>li>a .glyphicon-cog,
+.dropdown-menu>li>a .glyphicon-plus-sign,
+.dropdown-menu>li>a .glyphicon-upload,
+.dropdown-menu>li>a .glyphicon-download,
+.dropdown-menu>li>a .glyphicon-dashboard {
+    vertical-align: -1px;
+}
+.dropdown-menu>li>a .glyphicon-leaf{
+    vertical-align: -2px;
+}
+#user-menu-pic{
+    vertical-align: -1px;
+    margin-right: 2px;
+    margin-left: -4px;
 }
 
 /* footer */
