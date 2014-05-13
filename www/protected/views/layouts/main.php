@@ -32,7 +32,7 @@
                             <div class="form-group-keeper">
                                 <input type="text" class="form-control" id="top-search" placeholder="Найти заказ...">
                             </div>
-                            <button class="search-button-top glyphicon glyphicon-search"></button>
+                            <button class="search-button-top"></button>
                         </form>
                         <div class="nav-container pull-right">
                             <?php
@@ -45,7 +45,7 @@
                                     ),
                                     array(
                                         'label'   => 'Регистрация',
-                                        'url'     => array('/registration'),
+                                        'url'     => array('/registration/index'),
                                         'visible' => Yii::app()->user->isGuest),
                                 ),
                                 'htmlOptions' => array(

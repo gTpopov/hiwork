@@ -25,8 +25,6 @@ header{
     border: 0 !important;
     border-radius: 0 !important;
     background-color: #4c66a4 !important;
-    background: linear-gradient(to top, rgb(69,88,151),#4c66a4);
-    border-bottom: 1px solid #133783 !important;
     height: 42px !important;
     min-height: 1px !important;
 }
@@ -79,6 +77,11 @@ header{
 }
 .search-button-top{
     background-color: transparent;
+    background-image: url("/images/app.icons/search.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
     border: 0;
     border-left: 1px solid #DDD;
     cursor: pointer;
@@ -88,6 +91,7 @@ header{
     bottom: 3px;
     font-size: 14px;
     color: #999;
+    padding-left: 20px;
     vertical-align: -2px;
     right: 18px;
 }

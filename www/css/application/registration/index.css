@@ -1,8 +1,15 @@
-.col-sm-5{
-    background-color: #f9f9f9;
-    padding: 20px 10px;
+.form{
+    position: relative;
+    width: 392px;
+    margin: auto;
+}
+.form-control-container{
+    float: left;
     border-radius: 2px;
     box-shadow: 0 0 4px #DDD;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #f9f9f9;
 }
 h2{
     font-weight: 300;
@@ -10,12 +17,26 @@ h2{
     border-bottom: 1px solid #DDD;
     padding-bottom: 8px;
 }
+.user-accept{
+    margin: 0 0 10px;
+    padding: 9px 0;
+    border-bottom: 1px dotted #DDD;
+    border-top: 1px dotted #DDD;
+}
 #reparePass{
-    margin-top: 8px;
+    margin-top: 7px;
     margin-left: 5px;
+    font-size: 14px;
+    text-decoration: underline;
 }
 .row-in{
     margin: 10px 0;
+}
+.row-in a{
+    text-decoration: underline;
+}
+small{
+    font-size: 12px;
 }
 .row-in input{
     width: 100%;
