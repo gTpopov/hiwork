@@ -35,11 +35,10 @@
                         Yii::app()->mailer->AddAddress("mih_76@mail.ru", 'Имя');
                         Yii::app()->mailer->IsHTML(true);
                         Yii::app()->mailer->Subject = "Поступил новый заказ Delphis";
-                        Yii::app()->mailer->Body = "Text";
+                        Yii::app()->mailer->Body = "Message test {$user_id}";
 
                         if(!Yii::app()->mailer->Send()) {
-                            'Mailer Error: '.Yii::app()->mailer->ErrorInfo;
-                            Yii::app()->user->setFlash('success-registration',"Ошибка отправки сообщения.");
+                            Yii::app()->user->setFlash('failed-registration',"Ошибка отправки сообщения ".Yii::app()->mailer->ErrorInfo);
                         }
                         else {
                             Yii::app()->user->setFlash('success-registration',"На вашу почту отправлено письмо с дальнейшими инструкциями.");
@@ -47,7 +46,7 @@
                         }
                         //Yii::app()->mailer->ClearAddresses();
 
-                    }else
+                    } else
                     {
 
                         $model->user_password = $_POST['Users']['user_password'];
