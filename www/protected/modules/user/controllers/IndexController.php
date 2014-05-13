@@ -18,9 +18,17 @@
         {
             return array(
                 array(
+                    'deny',
+                    'roles' => array(
+                        Users::ROLE_GUEST, // 'user'
+                        Users::ROLE_MODER, // 'moderator'
+                        Users::ROLE_ADMIN,
+                    ),
+                ),
+                array(
                     'allow',
-                    'actions' => array('index'),
-                    'roles'   => array('user'),
+                    'actions' => array('*'),
+                    'roles'   => array(Users::ROLE_USER),
                 ),
             );
         }

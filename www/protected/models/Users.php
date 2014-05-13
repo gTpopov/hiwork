@@ -39,10 +39,10 @@ class Users extends CActiveRecord
 
     const SCENARIO_REGISTRATION = 'registration';
 
-    const ROLE_ADMIN  = 'admin';
-    const ROLE_MODER  = 'moderator';
-    const ROLE_USER   = 'user';
-    const ROLE_BANNED = 'banned';
+    const ROLE_GUEST  = 0;
+    const ROLE_USER   = 1;
+    const ROLE_ADMIN  = 2;
+    const ROLE_MODER  = 3;
 
 	/**
 	 * @return string the associated database table name
