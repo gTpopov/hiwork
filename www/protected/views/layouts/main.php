@@ -48,6 +48,10 @@
                                         'label'   => 'Регистрация',
                                         'url'     => array('/registration/index'),
                                         'visible' => Yii::app()->user->isGuest),
+                                    array(
+                                        'label'   => 'Выход',
+                                        'url'     => array('/registration/index'),
+                                        'visible' => !Yii::app()->user->isGuest),
                                 ),
                                 'htmlOptions' => array(
                                     'class' => 'nav navbar-nav pull-right'
