@@ -3,11 +3,29 @@
     width: 392px;
     margin: auto;
 }
+.form-control-container{
+    float: left;
+    border-radius: 2px;
+    box-shadow: 0 0 4px #DDD;
+    width: 100%;
+    padding: 20px 10px 15px;
+    background-color: #f9f9f9;
+}
+h2{
+    font-weight: 300;
+    margin-top: 0;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 8px;
+}
 .row-in{
     margin: 5px 0;
 }
+.buttons{
+    border-top: 1px solid #DDD;
+    padding-top: 9px;
+}
 .rem-me-box{
-    margin-top: 6px;
+    margin-top: 7px;
 }
 .rem-me-box label{
     float: left;

@@ -10,47 +10,52 @@
 
 
 <div class="form">
+    <div class="form-control-container">
+        <h2 class="text-center">Вход</h2>
+        <?php $form=$this->beginWidget('CActiveForm', array(
+            'id'                    => 'login-form-index-form',
+            'enableAjaxValidation'  => false,
 
-    <?php $form=$this->beginWidget('CActiveForm', array(
-        'id'                    => 'login-form-index-form',
-        'enableAjaxValidation'  => false,
-
-    )); ?>
-
-    <div class="row-in col-sm-12">
-        <?php echo $form->labelEx($model,'user_main_email', array(
-            'class' => 'formLabel'
         )); ?>
-        <?php echo $form->textField($model,'user_main_email', array(
-            'class' => 'alert alert-danger'
-        )); ?>
-        <?php echo $form->error($model,'user_main_email'); ?>
-    </div>
 
-    <div class="row-in col-sm-12">
-        <?php echo $form->labelEx($model,'user_password', array(
-            'class' => 'formLabel'
-        )); ?>
-        <?php echo $form->textField($model,'user_password', array(
-            'class' => 'alert alert-danger'
-        )); ?>
-        <?php echo $form->error($model,'user_password'); ?>
-    </div>
-
-    <div class="row-in col-sm-12 buttons">
-        <div class="pull-left rem-me-box">
-            <?php echo $form->labelEx($model,'remember_me', array(
+        <div class="row-in col-sm-12">
+            <?php echo $form->labelEx($model,'user_main_email', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->checkBox($model,'remember_me'); ?>
-        </div>
-        <div class="pull-right">
-            <?php echo CHtml::submitButton('Войти', array(
-                'class' => 'btn btn-info'
+            <?php echo $form->textField($model,'user_main_email', array(
+                'class'       => 'alert alert-danger',
+                'placeholder' => 'name-email@example.com'
             )); ?>
+            <?php echo $form->error($model,'user_main_email'); ?>
         </div>
-    </div>
 
-    <?php $this->endWidget(); ?>
+        <div class="row-in col-sm-12">
+            <?php echo $form->labelEx($model,'user_password', array(
+                'class' => 'formLabel'
+            )); ?>
+            <?php echo $form->textField($model,'user_password', array(
+                'class' => 'alert alert-danger',
+                'placeholder' => 'Ваш пароль'
+            )); ?>
+            <?php echo $form->error($model,'user_password'); ?>
+        </div>
+
+        <div class="row-in col-sm-12 buttons">
+            <div class="pull-left rem-me-box">
+                <?php echo $form->labelEx($model,'remember_me', array(
+                    'class' => 'formLabel'
+                )); ?>
+                <?php echo $form->checkBox($model,'remember_me'); ?>
+            </div>
+            <div class="pull-right">
+                <?php echo CHtml::submitButton('Войти', array(
+                    'class' => 'btn btn-info'
+                )); ?>
+            </div>
+        </div>
+
+        <?php $this->endWidget(); ?>
+
+    </div>
 
 </div><!-- form -->

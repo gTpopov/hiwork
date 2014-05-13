@@ -68,12 +68,17 @@ header{
     outline: none !important;
     box-shadow: none !important;
     margin-top: 1px;
-    padding-top: 7px;
+    padding-top: 6px;
     font-size: 14px;
     display: block;
-    color: #444;
+    color: #222;
     height: 27px;
     width: 100%;
+    border-radius: 3px;
+    border: 0;
+}
+#top-search:focus{
+    box-shadow: 0 0 5px #444 !important;
 }
 .search-button-top{
     background-color: transparent;

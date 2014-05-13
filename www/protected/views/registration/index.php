@@ -32,7 +32,6 @@
     <div class="form-control-container">
         <h2 class="text-center">Присоединяйся</h2>
         <?php
-
             $form = $this->beginWidget('CActiveForm', array(
                 'enableClientValidation' => true,
                 'enableAjaxValidation'   => false,
@@ -58,7 +57,7 @@
             <?php echo $form->labelEx($model,'user_main_email', array(
                 'class' => 'formLabel'
             )); ?>
-            <?php echo $form->textField($model,'user_main_email', array(
+            <?php echo $form->passwordField($model,'user_main_email', array(
                 'placeholder' => 'name-email@example.com'
             )); ?>
             <?php echo $form->error($model,'user_main_email', array(
