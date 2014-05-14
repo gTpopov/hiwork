@@ -42,6 +42,15 @@
                         else {
                             Yii::app()->user->setFlash('success-registration',"На вашу почту отправлено письмо с дальнейшими инструкциями.");
 
+
+                            //send md5()
+
+
+                            
+
+
+
+
                         }
                     }
                     else {
