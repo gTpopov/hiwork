@@ -25,14 +25,11 @@
                     if($model->save())
                     {
 
-                        //$model->user_password = $_POST['Users']['user_password'];
+                        $model->user_password = $_POST['Users']['user_password'];
 
                         $user_id   = (int) Yii::app()->db->lastInsertID;
                         $password  = (string) trim($_POST['Users']['user_password']);
                         $key       = (string) md5('HiWork.greg.2014'.$password);
-
-                        //$user_id                = (int) Yii::app()->user->getState('__uu_Id');
-                        $model->user_password   = (string) $_POST['Users']['user_password_repeat'];
 
                         $message = '<p>
                                     <b>'.$_POST['Users']['user_nick_name'].' приветсвуем на HiWork!</b>
@@ -55,12 +52,6 @@
                         }
                         else {
                             Yii::app()->user->setFlash('success-registration',"На вашу почту отправлено письмо с дальнейшими инструкциями.");
-
-
-                            //send md5()
-
-
-
                         }
                     }
                     else {
