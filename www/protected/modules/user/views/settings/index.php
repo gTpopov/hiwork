@@ -6,7 +6,10 @@
         <div class="photo-layout"></div>
         <div class="col-sm-3 user-info-in-first-block">
             <div class="user-picture">
-                <img src="/images/app.icons/user-icon.png">
+                <div class="text-center add-photo-title">
+                    <span class="glyphicon glyphicon-camera"></span>
+                    <p>Добавить фото</p>
+                </div>
             </div>
         </div>
     </div>

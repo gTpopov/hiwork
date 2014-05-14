@@ -22,8 +22,21 @@
     background-color: #FFF;
     text-align: center;
     width: 100px;
+    height: 100px;
     border-radius: 120px;
     margin: 15px auto;
     border-bottom: 1px solid #d8d8d8;
     box-shadow: 0 0 30px -10px #DDD;
+}
+.user-picture .add-photo-title{
+    padding-top: 18px;
+}
+.user-picture .add-photo-title span{
+    color: #08c;
+    font-size: 20px;
+}
+.user-picture .add-photo-title p{
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
 }
