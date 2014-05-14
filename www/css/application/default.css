@@ -162,6 +162,10 @@ header{
     background: rgba(0, 0, 0, .1);
     color: #FFF;
 }
+.nav-container .nav li a .glyphicon-pencil{
+    margin-top: 2px !important;
+}
+
 .open > ul > li.active a{
     color: #222 !important;
 }

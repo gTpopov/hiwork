@@ -112,12 +112,12 @@
                                             'url'     => array('/enter'),
                                         ),
                                         array(
-                                            'label'   => 'Вход',
+                                            'label'   => '<span class="glyphicon glyphicon-circle-arrow-right"></span> Вход',
                                             'url'     => array('/enter/index'),
                                             'visible' => Yii::app()->user->isGuest
                                         ),
                                         array(
-                                            'label'   => 'Регистрация',
+                                            'label'   => '<span class="glyphicon glyphicon-pencil"></span> Регистрация',
                                             'url'     => array('/registration/index'),
                                             'visible' => Yii::app()->user->isGuest
                                         ),
