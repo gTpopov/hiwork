@@ -32,7 +32,7 @@
                         $key       = (string) md5('HiWork.greg.2014'.$password);
 
                         //$user_id                = (int) Yii::app()->user->getState('__uu_Id');
-                        //$model->user_password   = (string) $_POST['Users']['user_password_repeat'];
+                        $model->user_password   = (string) $_POST['Users']['user_password_repeat'];
 
                         $message = '<p>
                                     <b>'.$_POST['Users']['user_nick_name'].' приветсвуем на HiWork!</b>
@@ -105,9 +105,9 @@
                     Yii::app()->request->cookies['__utId']  = $cookieID;
 
                     $model_auto_login = new LoginForm;
-                    $model_auto_login->setScenario('classicEnter');
-                    $_POST['LoginForm']['user_email']    = $str->user_email;
-                    $_POST['LoginForm']['user_password'] = $str->user_password;
+                    //$model_auto_login->setScenario('classicEnter');
+                    $_POST['LoginForm']['user_main_email'] = $str->user_main_email;
+                    $_POST['LoginForm']['user_password']   = $str->user_password;
 
                     $model_auto_login->attributes = $_POST['LoginForm'];
 
@@ -115,7 +115,7 @@
                     {
                         unset(Yii::app()->request->cookies['__utId']);
 
-                        if($model->updateByPk($uid,array('user_status'=>'1')))
+                        if($model->updateByPk($uid,array('user_account_status'=>'1')))
                         {
                             $this->redirect(Yii::app()->user->returnUrl);
                         }
