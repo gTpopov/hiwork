@@ -42,8 +42,6 @@
                                     </a> или скопируйте '.Yii::app()->request->hostInfo.'/registration/activation?_ukey='.$key.'&uid='.$user_id.'&__utime='.time().'
                                     </p>';
 
-
-
                         // Send message on mail
                         Yii::app()->mailer->From = "test@mail.com";
                         Yii::app()->mailer->FromName = "Delphis - servise.";
