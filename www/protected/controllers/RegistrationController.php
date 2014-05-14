@@ -1,6 +1,6 @@
 <?php
 
-    class RegistrationController extends Controller{
+    class RegistrationController extends Controller {
 
 
         public function actionIndex(){
@@ -75,7 +75,7 @@
                 $this->render('index',array(
                     'model' => $model
                 ));
-            }else{
+            } else {
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         }
@@ -92,14 +92,14 @@
 
             if(isset($_GET['_ukey']))
             {
-                $model = new Users();
+                //$model = new Users();
                 $uid = intval($_GET['uid']);
                 $str = Users::model()->findByPk($uid);
 
                 $key = $str->user_password;
 
 
-                if($key === $_GET['_ukey'])
+                if($key === $_GET['_ukey'] && $str->user_account_status === '0')
                 {
                     $cookieID = new CHttpCookie('__utId',$uid);
                     Yii::app()->request->cookies['__utId']  = $cookieID;
@@ -115,21 +115,25 @@
                     {
                         unset(Yii::app()->request->cookies['__utId']);
 
-                        if($model->updateByPk($uid,array('user_account_status'=>'1')))
+                        if(Users::model()->updateByPk($uid,array('user_account_status'=>'1')))
                         {
+                            //print 'success';
                             $this->redirect(Yii::app()->user->returnUrl);
                         }
                         else {
 
+                            //print 1;
                             $this->redirect('/');
                         }
 
                     }
                     else {
+                        //print 2;
                         $this->redirect("/");
                     }
                 }
                 else {
+                    //print 3;
                     $this->redirect("/");
                 }
             }
