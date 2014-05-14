@@ -47,6 +47,9 @@ h2{
     margin-right: 18px;
     text-decoration: underline;
 }
+input[type=checkbox]{
+    margin-top: 0;
+}
 .rem-me-box label:first-letter{
     text-transform: uppercase;
 }

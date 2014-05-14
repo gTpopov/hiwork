@@ -7,7 +7,7 @@
     Yii::app()->clientScript->registerCssFile('/css/application/registration/index.css')
         ->registerScriptFile('/js/application/registration/index.js');
 
-    $this->pageTitle = Yii::app()->name.'| Ресгистрация'
+    $this->pageTitle = Yii::app()->name.' | Ресгистрация'
 
 ?>
 
@@ -51,7 +51,7 @@
                 'placeholder' => 'Ваш никнейм'
             )); ?>
             <?php echo $form->error($model,'user_nick_name', array(
-                'class' => 'alert alert-danger'
+                'class' => 'alert alert-danger alert-form-danger'
             )); ?>
         </div>
 
@@ -63,7 +63,7 @@
                 'placeholder' => 'name-email@example.com'
             )); ?>
             <?php echo $form->error($model,'user_main_email', array(
-                'class' => 'alert alert-danger'
+                'class' => 'alert alert-danger alert-form-danger'
             )); ?>
         </div>
 
@@ -77,7 +77,7 @@
                 'maxlength'   => 32
             )); ?>
             <?php echo $form->error($model,'user_password', array(
-                'class' => 'alert alert-danger'
+                'class' => 'alert alert-danger alert-form-danger'
             )); ?>
         </div>
 

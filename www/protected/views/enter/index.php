@@ -7,7 +7,7 @@
     Yii::app()->clientScript->registerCssFile('/css/application/enter/index.css')
         ->registerScriptFile('/js/application/enter/index.js');
 
-    $this->pageTitle = Yii::app()->name.'| Вход '
+    $this->pageTitle = Yii::app()->name.' | Вход '
 
 ?>
 
@@ -30,7 +30,7 @@
                 'placeholder' => 'name-email@example.com'
             )); ?>
             <?php echo $form->error($model,'user_main_email', array(
-                'class' => 'alert alert-danger'
+                'class' => 'alert alert-danger alert-form-danger'
             )); ?>
         </div>
 
@@ -43,7 +43,7 @@
                 'placeholder' => 'Ваш пароль'
             )); ?>
             <?php echo $form->error($model,'user_password', array(
-                'class' => 'alert alert-danger'
+                'class' => 'alert alert-danger alert-form-danger'
             )); ?>
         </div>
 
