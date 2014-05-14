@@ -49,10 +49,13 @@
 
         <div class="row-in col-sm-12 buttons">
             <div class="pull-left rem-me-box">
-                <?php echo $form->labelEx($model,'remember_me', array(
-                    'class' => 'formLabel'
-                )); ?>
-                <?php echo $form->checkBox($model,'remember_me'); ?>
+                <a class="pull-left" id="reparePass" href="#">Забыл пароль</a>
+                <div class="pull-right">
+                    <?php echo $form->labelEx($model,'remember_me', array(
+                        'class' => 'formLabel'
+                    )); ?>
+                    <?php echo $form->checkBox($model,'remember_me'); ?>
+                </div>
             </div>
             <div class="pull-right">
                 <?php echo CHtml::submitButton('Войти', array(
@@ -64,5 +67,6 @@
         <?php $this->endWidget(); ?>
 
     </div>
+    <img id="shadow" src="/images/app.design/shadow-bottom-img.png">
 
 </div><!-- form -->

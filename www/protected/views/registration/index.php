@@ -88,6 +88,7 @@
 
         <div class="col-sm-12 buttons">
             <a class="pull-left" id="reparePass" href="#">Забыл пароль</a>
+            <a class="pull-left" id="sendMoreLetter" href="#">Не пришло письмо</a>
             <?php echo CHtml::submitButton('Присоединиться',array(
                 'class' => 'btn btn-info pull-right'
             )); ?>
@@ -95,5 +96,6 @@
 
         <?php $this->endWidget(); ?>
     </div>
+    <img id="shadow" src="/images/app.design/shadow-bottom-img.png">
 
 </div><!-- form -->

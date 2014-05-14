@@ -11,6 +11,10 @@
     padding: 20px 10px 15px;
     background-color: #f9f9f9;
 }
+#shadow{
+    width: 392px;
+    margin: auto;
+}
 h2{
     font-weight: 300;
     margin-top: 0;
@@ -36,6 +40,12 @@ h2{
 .row-in .alert{
     padding: 8px 10px;
     margin: 4px 0;
+}
+#reparePass{
+    float: left;
+    display: block;
+    margin-right: 18px;
+    text-decoration: underline;
 }
 .rem-me-box label:first-letter{
     text-transform: uppercase;
