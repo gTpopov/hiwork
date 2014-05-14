@@ -14,7 +14,7 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
-    opacity: .4;
+    opacity: .6;
     -webkit-transition: all 0.5s ease, color 0.3s ease;
     -moz-transition: all 0.5s ease, color 0.3s ease;
     -ms-transition: all 0.5s ease, color 0.3s ease;
@@ -36,24 +36,14 @@
 .modal-footer{
     margin-top: 0;
 }
-.click-me-or-drag-here-files{
-    height: 440px;
-    padding-top: 180px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 2px dashed #DDD;
-    border-radius: 4px;
-    -webkit-transition: all 0.2s ease, color 0.3s ease;
-    -moz-transition: all 0.2s ease, color 0.3s ease;
-    -ms-transition: all 0.2s ease, color 0.3s ease;
-    -o-transition: all 0.2s ease, color 0.3s ease;
+
+.js-browse{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
-.click-me-or-drag-here-files:hover{
-    border-color: #428bca;
-}
-
-
-
 
 .user-info-in-first-block{
     background-color: rgba(255,255,255,.5);

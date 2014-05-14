@@ -1,25 +1,28 @@
 <?php
     Yii::app()->clientScript->registerCssFile('/css/application/user.application/settings/index.css');
+    Yii::app()->clientScript->registerCssFile('/js/library/files-upload/file-crop/jquery.Jcrop.min.css');
     $this->pageTitle = Yii::app()->user->nick.' |  Настройки'
 ?>
     <script>
+        window.FileAPI = {
+            debug: true,
+            staticPath: '/js/library/files-upload/FileAPI/' // path to *.swf
+        };
+    </script>
+    <script src="/js/library/files-upload/FileAPI/FileAPI.min.js"></script>
+    <script src="/js/library/files-upload/FileAPI/FileAPI.exif.js"></script>
+    <script src="/js/library/files-upload/jquery.fileapi.js"></script>
+    <script src="/js/library/files-upload/file-crop/jquery.Jcrop.min.js"></script>
+
+    <script>
         $(function(){
 
-            $('.no-picture, .user-name b').tooltip();
-
-            window.FileAPI = {
-                debug: true,
-                staticPath: '/js/library/files-upload/FileAPI/' // path to *.swf
-            };
 
 
 
 
         });
     </script>
-    <script src="/js/library/files-upload/FileAPI/FileAPI.min.js"></script>
-    <script src="/js/library/files-upload/FileAPI/FileAPI.exif.js"></script>
-    <script src="/js/library/files-upload/jquery.fileapi.min.js"></script>
 
     <div class="modal fade" id="change-layout-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
