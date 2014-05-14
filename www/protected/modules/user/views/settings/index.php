@@ -8,7 +8,6 @@
             <div class="user-picture">
                 <div class="text-center add-photo-title">
                     <span class="glyphicon glyphicon-camera"></span>
-                    <p>Добавить фото</p>
                 </div>
             </div>
         </div>
