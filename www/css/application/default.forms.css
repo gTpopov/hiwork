@@ -41,7 +41,7 @@
     background-color: #90b0e0;
 }
 
-/* input writtable fields */
+/* input writable fields */
 input[type=text],input[type=email],input[type=password]{
     margin: 0;
     -webkit-appearance: none;
@@ -73,11 +73,34 @@ input[type=text],input[type=email],input[type=password]{
     outline: none;
 }
 
-.alert-form-danger{
-    margin-top: -4px !important;
-    background: #f04124;
-    font-size: 12px;
-    padding: 2px 4px !important;
-    font-style: italic;
-    border-radius: 0;
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #555 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
 }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #555 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #555 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #555 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+}
+

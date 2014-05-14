@@ -9,12 +9,55 @@
     box-shadow: 0 0 30px -10px #DDD;
     position: absolute;
 }
+
+#change-layout{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    opacity: .4;
+    -webkit-transition: all 0.5s ease, color 0.3s ease;
+    -moz-transition: all 0.5s ease, color 0.3s ease;
+    -ms-transition: all 0.5s ease, color 0.3s ease;
+    -o-transition: all 0.5s ease, color 0.3s ease;
+}
+.photo-layout:hover #change-layout{
+    opacity: 1;
+}
+
 .first-block,.user-info-in-first-block{
     min-height: 320px;
 }
 
+
+#change-user-picture-area{
+    min-height: 440px;
+    padding: 5px;
+}
+.modal-footer{
+    margin-top: 0;
+}
+.click-me-or-drag-here-files{
+    height: 440px;
+    padding-top: 180px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px dashed #DDD;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease, color 0.3s ease;
+    -moz-transition: all 0.2s ease, color 0.3s ease;
+    -ms-transition: all 0.2s ease, color 0.3s ease;
+    -o-transition: all 0.2s ease, color 0.3s ease;
+}
+.click-me-or-drag-here-files:hover{
+    border-color: #428bca;
+}
+
+
+
+
 .user-info-in-first-block{
     background-color: rgba(255,255,255,.5);
+    box-shadow: 5px 0 13px -8px #999;
     z-index: 99;
 }
 
@@ -24,13 +67,18 @@
     width: 100px;
     height: 100px;
     border-radius: 120px;
-    margin: 15px auto;
+    margin: 25px auto 25px;
     border-bottom: 1px solid #d0d0d0;
 }
-.user-picture .add-photo-title{
-    padding-top: 34px;
+.no-picture{
+    background-image: url('/images/app.icons/avatars.jpg');
+    background-position: -26px -34px;
+    cursor: pointer;
 }
-.user-picture .add-photo-title span{
-    color: #08c;
-    font-size: 24px;
+
+.user-name{
+    font-size: 16px;
+}
+.user-name b{
+    cursor: pointer;
 }
