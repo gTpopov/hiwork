@@ -22,20 +22,17 @@
                 multiple    : true,
                 imageSize   : { minWidth: 200, minHeight: 200 },
                 maxSize     : 2 * FileAPI.MB,
-                autoUpload  : true,
+                autoUpload  : false,
+                clearOnComplete: true,
+                elements: {
+                    ctrl: { upload: '#upload-layout', reset: '#reset-layout' }
+                },
                 onSelect    : function(evt,ui){
-                    var file = ui.files[0];
-                    if(file.length > 0){
-                        $('.img-view').cropper({
-                            file      : file,
-                            bgColor   : '#fff',
-                            maxSize   : [$(window).width()-100, $(window).height()-100],
-                            minSize   : [200, 200],
-                            selection : '90%'
-                        });
-                    }
+
                 }
             });
+
+            //alert($(document).width()/2);
 
         });
     </script>
@@ -63,8 +60,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-info btn-primary">Сохранить</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal" id="reset-layout">Отмена</button>
+                    <button type="button" class="btn btn-info btn-primary" id="upload-layout">Сохранить</button>
                 </div>
             </div>
         </div>
