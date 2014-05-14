@@ -37,13 +37,6 @@
     margin-top: 0;
 }
 
-.js-browse{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
 
 .user-info-in-first-block{
     background-color: rgba(255,255,255,.5);
@@ -64,6 +57,16 @@
     background-image: url('/images/app.icons/avatars.jpg');
     background-position: -26px -34px;
     cursor: pointer;
+}
+
+.uploader-empty, #upload-area-layout{
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    width: 100%;
+}
+#upload-area-layout{
+    cursor: pointer;
+    opacity: 0;
 }
 
 .user-name{
