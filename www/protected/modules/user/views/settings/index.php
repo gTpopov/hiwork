@@ -15,25 +15,50 @@
 
 
             var url = window.location.href.split('/'), protocol = url[0], host = url[2], baseUrl = protocol + '://' + host;
+            var dropBox = $('.uploader-empty');
 
-            $('.uploader-empty').fileapi({
+            dropBox.bind({
+
+                dragenter: function() {
+                    $(this).addClass('uploader-hover',350);
+                    $('#instr-layout-photo').stop().slideUp(100);
+                },
+                dragleave: function() {
+                    $(this).removeClass('uploader-hover',0);
+                    $('#instr-layout-photo').stop().slideDown(200);
+                },
+                drop: function() {
+                    $(this).removeClass('uploader-hover',0);
+                    $('#instr-layout-photo').stop().slideDown(200);
+                }
+
+            });
+
+            dropBox.fileapi({
                 url         : '/user/settings/uploadLayout',
                 accept      : 'image/*',
-                multiple    : true,
+                multiple    : false,
                 imageSize   : { minWidth: 200, minHeight: 200 },
                 maxSize     : 2 * FileAPI.MB,
                 autoUpload  : false,
                 clearOnComplete: true,
                 elements: {
-                    ctrl: { upload: '#upload-layout', reset: '#reset-layout' }
+                    ctrl: { upload: '#upload-layout', reset: '#reset-layout' },
+                    dnd:  { el: '#upload-area-layout' }
                 },
-                onSelect    : function(evt,ui){
+                onSelect    : function(e,ui){
+
+                    var file = ui.files[0];
+
+                    if( file ){
+
+                    }
 
                 }
             });
+/*
 
-            //alert($(document).width()/2);
-
+*/
         });
     </script>
 
@@ -48,7 +73,7 @@
                 <div class="modal-body" id="change-user-picture-area">
 
                     <div class="uploader-empty text-center">
-                        <span></span>
+                        <span id="instr-layout-photo">Кликните, чтобы выбрать фото,<br> или перетяните его сюда</span>
                         <?php echo CHtml::form('','post',array('enctype'=>'multipart/form-data')); ?>
                             <?php echo CHtml::activeFileField($image, 'image', array('id'=>'upload-area-layout')); ?>
                         <?php echo CHtml::endForm(); ?>

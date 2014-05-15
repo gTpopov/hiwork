@@ -61,3 +61,11 @@
     font-style: italic;
     border-radius: 0;
 }
+
+
+.modal-title{
+    font-weight: 400;
+}
+.modal-footer{
+    padding: 10px 20px;
+}

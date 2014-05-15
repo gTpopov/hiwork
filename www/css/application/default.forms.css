@@ -18,7 +18,7 @@
 }
 
 .btn[disabled=disabled]{
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     pointer-events: auto;
 }
 .btn-info{
@@ -38,7 +38,7 @@
     background-color: rgba(0, 102, 204, 0.73);
 }
 .btn-info[disabled=disabled],.btn-info[disabled=disabled]:hover{
-    background-color: #90b0e0;
+    background-color: #90b0e0 !important;
 }
 
 /* input writable fields */
