@@ -35,7 +35,7 @@
                             </div>
                             <button class="search-button-top"></button>
                         </form>
-                        <div class="nav-container pull-right">
+                        <div class="nav-container pull-left">
                             <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'encodeLabel' => false,
@@ -111,6 +111,19 @@
                                             'label'   => '<span id="user-menu-pic" class="glyphicon glyphicon-globe"></span> Люди',
                                             'url'     => array('/enter'),
                                         ),
+                                    ),
+                                    'htmlOptions' => array(
+                                        'class' => 'nav navbar-nav pull-right'
+                                    ),
+                                    'submenuHtmlOptions' => array('class'=>'dropdown-menu')
+                                ));
+                            ?>
+                        </div>
+                        <div class="nav-container pull-right">
+                            <?php
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'encodeLabel' => false,
+                                    'items'       => array(
                                         array(
                                             'label'   => '<span class="glyphicon glyphicon-circle-arrow-right"></span> Вход',
                                             'url'     => array('/enter/index'),
