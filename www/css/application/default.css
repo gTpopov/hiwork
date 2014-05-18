@@ -27,6 +27,8 @@ header{
     background-color: #4c66a4 !important;
     height: 42px !important;
     min-height: 1px !important;
+    position: relative;
+    z-index: 999;
 }
 
 /* logotype */

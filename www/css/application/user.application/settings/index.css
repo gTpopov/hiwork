@@ -4,10 +4,13 @@
     background-image: url("/images/app.design/layout-photo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 4px;
-    border-bottom: 1px solid #d8d8d8;
+    border: 1px solid #d3d6db;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -ms-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
     box-shadow: 0 0 30px -10px #DDD;
-    position: absolute;
+    position: relative;
 }
 
 #change-layout{
@@ -27,40 +30,46 @@
 .first-block,.user-info-in-first-block{
     min-height: 320px;
 }
+.first-block{
+    margin-top: -22px;
+}
 
 
 #change-user-picture-area{
     min-height: 440px;
-    padding: 5px;
+    padding: 5px 0;
 }
 .modal-footer{
     margin-top: 0;
 }
 
-#change-layout-modal .modal-dialog{
-    min-width: 440px !important;
-    max-width: 1200px !important;
+.jcrop-holder{
+    margin: auto !important;
 }
-
+.jcrop-keymgr{
+    display: none;
+    opacity: 0;
+}
 
 .user-info-in-first-block{
     background-color: rgba(255,255,255,.5);
     box-shadow: 5px 0 13px -8px #999;
     z-index: 99;
+    position: absolute;
+    top: 0;
 }
 
 .user-picture{
     background-color: #FFF;
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 98px;
+    height: 98px;
     border-radius: 120px;
     margin: 25px auto 25px;
-    border-bottom: 1px solid #d0d0d0;
 }
 .no-picture{
     background-image: url('/images/app.icons/avatars.jpg');
-    background-position: -26px -34px;
+    background-position: -27px -34px;
     cursor: pointer;
 }
 
@@ -80,6 +89,10 @@
     margin-top: 180px;
     display: block;
     font-size: 20px;
+}
+
+.modal-footer #upload-layout[disabled=disabled]{
+    background-color: #90b0e0 !important;
 }
 
 .user-name{

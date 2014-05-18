@@ -5,8 +5,8 @@
         ->registerScriptFile('/js/library/files-upload/FileAPI/FileAPI.min.js')
         ->registerScriptFile('/js/library/files-upload/FileAPI/FileAPI.exif.js')
         ->registerScriptFile('/js/library/files-upload/jquery.fileapi.js')
-        ->registerScriptFile('/js/application/user.application/settings/index.js');
-        //->registerScriptFile('/js/library/files-upload/file-crop/jquery.Jcrop.min.js');
+        ->registerScriptFile('/js/application/user.application/settings/index.js')
+        ->registerScriptFile('/js/library/files-upload/file-crop/jquery.Jcrop.min.js');
     $this->pageTitle = Yii::app()->user->nick.' |  Настройки'
 ?>
     <script>
@@ -21,15 +21,15 @@
 
                 dragenter: function() {
                     $(this).addClass('uploader-hover',350);
-                    $('#instr-layout-photo').stop().slideUp(100);
+                    $('#instr-layout-photo').stop().toggle(100);
                 },
                 dragleave: function() {
                     $(this).removeClass('uploader-hover',0);
-                    $('#instr-layout-photo').stop().slideDown(200);
+                    $('#instr-layout-photo').stop().toggle(200);
                 },
                 drop: function() {
                     $(this).removeClass('uploader-hover',0);
-                    $('#instr-layout-photo').stop().slideDown(200);
+                    $('#instr-layout-photo').stop().toggle(200);
                 }
 
             });
@@ -38,27 +38,39 @@
                 url         : '/user/settings/uploadLayout',
                 accept      : 'image/*',
                 multiple    : false,
-                imageSize   : { minWidth: 200, minHeight: 200 },
+                imageSize   : { minWidth: 400, minHeight: 200 },
                 maxSize     : 2 * FileAPI.MB,
                 autoUpload  : false,
-                clearOnComplete: true,
+                clearOnComplete : true,
                 elements: {
                     ctrl: { upload: '#upload-layout', reset: '#reset-layout' },
-                    dnd:  { el: '#upload-area-layout' }
+                    dnd:  { el: '.uploader-empty' }
                 },
                 onSelect    : function(e,ui){
 
                     var file = ui.files[0];
 
                     if( file ){
+                        $('#layoutSeen').cropper({
+                            file: file,
+                            bgColor: '#fff',
+                            maxSize: [$('.modal-dialog').width(), $('.modal-dialog').height()],
+                            minSize: [400, 200],
+                            selection: '100%',
+                            onSelect : function(coords){
 
+                            }
+                        });
+                        $('.uploader-empty').hide();
                     }
 
                 }
             });
-/*
 
-*/
+            $('#reset-layout').click(function(){
+                $("#layoutSeen").html('').prev('.uploader-empty').show();
+            });
+
         });
     </script>
 
@@ -70,7 +82,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title text-center" id="myModalLabel">Изменить обложку профиля</h4>
                 </div>
-                <div class="modal-body" id="change-user-picture-area">
+                <div class="modal-body text-center" id="change-user-picture-area">
 
                     <div class="uploader-empty text-center">
                         <span id="instr-layout-photo">Кликните, чтобы выбрать фото,<br> или перетяните его сюда</span>
@@ -78,11 +90,7 @@
                             <?php echo CHtml::activeFileField($image, 'image', array('id'=>'upload-area-layout')); ?>
                         <?php echo CHtml::endForm(); ?>
                     </div>
-
-                    <div class="img-view">
-
-                    </div>
-
+                    <div class="img-view" id="layoutSeen"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal" id="reset-layout">Отмена</button>

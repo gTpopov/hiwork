@@ -38,6 +38,7 @@
     background-color: rgba(0, 102, 204, 0.73);
 }
 .btn-info[disabled=disabled],.btn-info[disabled=disabled]:hover{
+    background: none;
     background-color: #90b0e0 !important;
 }
 
